@@ -1,0 +1,21 @@
+{
+    "name": "caxy/annotation-bundle",
+    "description": "Implementation of Annotator(http://okfnlabs.org/annotator/)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Grindstaff",
+            "email": "jgrindstaff@caxy.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1"
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+	"twig/extensions": "1.0.*",
+    },
+    "autoload": {
+        "psr-0": { "Caxy\\AnnotationBundle": "" }
+    },
+    "target-dir": "Caxy/AnnotationBundle"
+}
