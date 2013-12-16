@@ -18,12 +18,12 @@ This version of the bundle requires Symfony 2.2, jQuery, and Doctrine.
 
 ### Step 1: Download CaxyAnnotationBundle using composer
 
-Add FOSUserBundle in your composer.json:
+Add CaxyAnnotationBundle in your composer.json:
 
 ```js
 {
     "require": {
-        "caxy/caxyannotationbundle": "~1.0@dev"
+        "caxy/annotationbundle": "~1.0@dev"
     }
 }
 ```
@@ -96,6 +96,6 @@ Now that the CaxyAnnotationBundle is activated and configured, you can use it by
 {{ annotation_init() }}
 
 * If using the store plugin enabled in the config, custom metadata can be added and passed with the regular data
-* ex: {{ annotation_init( {'metadata': {'productId': 11} }) }}
+* ex: {{ annotation_init({'metadata': {'productId': 11}}) }}
 
 
