@@ -89,7 +89,7 @@ $ php app/console doctrine:schema:update --force
 
 Now that the CaxyAnnotationBundle is activated and configured, you can use it by adding the following to any twig view:
 
-``` twig
+``` php
 {{ annotation_init() }}
 
 And add an html container with the selector added to the config in Step 3
