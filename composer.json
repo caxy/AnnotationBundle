@@ -2,6 +2,8 @@
     "name": "caxy/annotation-bundle",
     "description": "Implementation of Annotator(http://okfnlabs.org/annotator/)",
     "license": "MIT",
+    "keywords": [ "annotation", "annotator" ],
+    "homepage": "https://github.com/caxy/AnnotationBundle",
     "authors": [
         {
             "name": "James Grindstaff",
@@ -14,6 +16,12 @@
         "doctrine/orm": ">=2.2.3,<2.4-dev",
 	"twig/extensions": "1.0.*"
     },
+    "repositories" : [
+       {
+               "type": "git",
+               "url": "https://github.com/caxy/AnnotationBundle"
+       },
+    ],
     "autoload": {
         "psr-0": { "Caxy\\AnnotationBundle": "" }
     },
