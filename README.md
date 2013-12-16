@@ -23,7 +23,7 @@ Add CaxyAnnotationBundle in your composer.json:
 ```js
 {
     "require": {
-        "caxy/annotationbundle": "~1.0@dev"
+        "caxy/annotation": "dev-master"
     }
 }
 ```
@@ -94,6 +94,9 @@ Now that the CaxyAnnotationBundle is activated and configured, you can use it by
 
 ``` twig
 {{ annotation_init() }}
+
+And add an html container with the selector added to the config in Step 3
+ex: <div class="annotation"></div>
 
 * If using the store plugin enabled in the config, custom metadata can be added and passed with the regular data
 * ex: {{ annotation_init({'metadata': {'productId': 11}}) }}
