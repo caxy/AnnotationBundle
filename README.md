@@ -31,7 +31,7 @@ Add CaxyAnnotationBundle in your composer.json:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update caxy/caxyannotationbundle
+$ php composer.phar update caxy/caxy-annotation
 ```
 
 Composer will install the bundle to your project's `vendor/caxy` directory.
@@ -74,8 +74,6 @@ In YAML:
 
 caxy_annotation:
     resource: "@AnnotationBundle/Resources/config/routing/routing.yml"
-    type:     annotation
-    prefix:   /
 
 ### Step 5: Update your database schema
 
