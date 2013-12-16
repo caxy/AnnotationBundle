@@ -84,7 +84,6 @@ For ORM run the following command.
 
 ``` bash
 $ php app/console doctrine:schema:update --force
-```
 
 ### Step 6: Initialize CaxyAnnotation on the pages needed.
 
