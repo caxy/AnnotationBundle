@@ -81,6 +81,8 @@ caxy_annotation:
 
 ### Step 5: Update your database schema
 
+* Updating your schema is only needed if you are using the store plugin. If you aren't, skip to Step 6.
+
 Now that the bundle is configured, the last thing you need to do is update your
 database schema.
 
