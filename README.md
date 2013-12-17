@@ -23,7 +23,7 @@ Add CaxyAnnotationBundle in your composer.json:
 ```js
 {
     "require": {
-        "caxy/annotation": "dev-master"
+        "caxy/annotation-bundle": "dev-master"
     }
 }
 ```
@@ -74,6 +74,7 @@ In YAML:
 
 caxy_annotation:
     resource: "@AnnotationBundle/Resources/config/routing/routing.yml"
+```
 
 ### Step 5: Update your database schema
 
@@ -84,6 +85,7 @@ For ORM run the following command.
 
 ``` bash
 $ php app/console doctrine:schema:update --force
+```
 
 ### Step 6: Initialize CaxyAnnotation on the pages needed.
 
@@ -91,6 +93,7 @@ Now that the CaxyAnnotationBundle is activated and configured, you can use it by
 
 ``` php
 {{ annotation_init() }}
+```
 
 And add an html container with the selector added to the config in Step 3
 ex: <div class="annotation"></div>
