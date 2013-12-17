@@ -17,6 +17,7 @@
         "doctrine/orm": ">=2.2.3,<2.4-dev",
 	"twig/extensions": "1.0.*"
     },
+    "target-dir": "Caxy/AnnotationBundle",
     "autoload": {
         "psr-0": { "Caxy\\AnnotationBundle": "" }
     }
