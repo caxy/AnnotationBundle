@@ -1,5 +1,5 @@
 {
-    "name": "caxy/annotation",
+    "name": "caxy/annotation-bundle",
     "type": "symfony-bundle",
     "description": "Implementation of Annotator(http://okfnlabs.org/annotator/)",
     "license": "MIT",
