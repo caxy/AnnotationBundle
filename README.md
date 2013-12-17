@@ -55,7 +55,7 @@ public function registerBundles()
 
 ### Step 3: Configure the CaxyAnnotationBundle
 
-# app/config/annotation/annotation.yml
+## app/config/annotation/annotation.yml
 annotation:
     selector: ".annotation"
     plugins: ['store']
