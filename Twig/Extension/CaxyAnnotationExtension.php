@@ -89,8 +89,26 @@ class CaxyAnnotationExtension extends \Twig_Extension
         /** @var $assets \Symfony\Component\Templating\Helper\CoreAssetsHelper */
         $assets = $this->getService('templating.helper.assets');
 
+        $plugin_array = array();
+
+        if(isset($config['plugins'])){
+            $plugin_count = count($config['plugins']);
+
+            for($i=0;$i<=$plugin_count;$i++){
+                if(isset($config['plugins'][$i])){
+                    switch($config['plugins'][$i]){
+                        case "store":
+                            array_push($plugin_array, 'store');
+                        break;
+                    }
+                }
+            }
+            
+        }
+
         return $this->getService('templating')->render('CaxyAnnotationBundle:Script:init.html.twig', array(
             'annotation_config' => json_encode($config),
+            'plugin_array' => $plugin_array,
             'base_url'       => $this->baseUrl,
         ));
     }
