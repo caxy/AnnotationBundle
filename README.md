@@ -58,7 +58,7 @@ public function registerBundles()
 app/config/caxy/annotation.yml
 
 ``` yaml
-caxy/annotation:
+caxy_annotation:
     selector: ".annotation"
     plugins: ['store']
 ```
