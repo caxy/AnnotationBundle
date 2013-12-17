@@ -53,7 +53,7 @@ class AnnotationController extends Controller
                               'end_offset' => $range['endOffset']
                             );
 
-      $annotation = $entity_manager->getRepository('AnnotationBundle:Annotation')->findOneBy($search_array);
+      $annotation = $entity_manager->getRepository('CaxyAnnotationBundle:Annotation')->findOneBy($search_array);
 
       if(!$annotation){
         $annotation = new Annotation();
@@ -101,7 +101,7 @@ class AnnotationController extends Controller
                               'end_offset' => $range['endOffset']
                             );
 
-      $annotation = $entity_manager->getRepository('AnnotationBundle:Annotation')->findOneBy($search_array);
+      $annotation = $entity_manager->getRepository('CaxyAnnotationBundle:Annotation')->findOneBy($search_array);
 
       if(!$annotation){
         return new JsonResponse(array('success' => false));
@@ -129,7 +129,7 @@ class AnnotationController extends Controller
       }
 
       $entity_manager = $this->getDoctrine()->getManager();                              
-      $annotations = $entity_manager->getRepository('AnnotationBundle:Annotation')
+      $annotations = $entity_manager->getRepository('CaxyAnnotationBundle:Annotation')
                                     ->findBy(array('url' => $uri));
       
       $annotation_array = array('response' => 'No results found.');

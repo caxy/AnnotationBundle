@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * 
  */
-class AnnotationExtension extends \Twig_Extension
+class CaxyAnnotationExtension extends \Twig_Extension
 {
     /**
      * Container
@@ -89,7 +89,7 @@ class AnnotationExtension extends \Twig_Extension
         /** @var $assets \Symfony\Component\Templating\Helper\CoreAssetsHelper */
         $assets = $this->getService('templating.helper.assets');
 
-        return $this->getService('templating')->render('AnnotationBundle:Script:init.html.twig', array(
+        return $this->getService('templating')->render('CaxyAnnotationBundle:Script:init.html.twig', array(
             'annotation_config' => json_encode($config),
             'base_url'       => $this->baseUrl,
         ));

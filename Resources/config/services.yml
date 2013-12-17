@@ -1,5 +1,5 @@
 parameters: 
-        caxy_annotation.twig.extension.class: Caxy\AnnotationBundle\Twig\Extension\AnnotationExtension
+        caxy_annotation.twig.extension.class: Caxy\AnnotationBundle\Twig\Extension\CaxyAnnotationExtension
 
 services:
     annotation_extension:

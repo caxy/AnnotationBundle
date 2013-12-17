@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class AnnotationExtension extends Extension
+class CaxyAnnotationExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -37,6 +37,6 @@ class AnnotationExtension extends Extension
      */
     public function getAlias()
     {
-        return 'annotation';
+        return 'caxy_annotation';
     }
 }

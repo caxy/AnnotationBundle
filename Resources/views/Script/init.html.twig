@@ -1,12 +1,13 @@
-<link href="{{ asset([base_url, 'bundles/annotation/annotator/annotator.min.css']|join) }}" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="{{ asset([base_url, 'bundles/annotation/annotator/annotator.min.js']|join) }}"></script>
+<link href="{{ asset([base_url, 'bundles/caxyannotation/annotator/annotator.min.css']|join) }}" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="{{ asset([base_url, 'bundles/caxyannotation/annotator/annotator.min.js']|join) }}"></script>
 
 {# Plugins #}
-<script type="text/javascript" src="{{ asset([base_url, 'bundles/annotation/annotator/annotator.store.min.js']|join) }}"></script>
+<script type="text/javascript" src="{{ asset([base_url, 'bundles/caxyannotation/annotator/annotator.store.min.js']|join) }}"></script>
 
 {# Init #}
-<script type="text/javascript" src="{{ asset([base_url, 'bundles/annotation/js/init.standard.js']|join) }}"></script>
+<script type="text/javascript" src="{{ asset([base_url, 'bundles/caxyannotation/js/init.standard.js']|join) }}"></script>
 
 <script type="text/javascript">
+console.log({{ annotation_config|raw }});
 	initAnnotator({{ annotation_config|raw }},  '{{- app.request.getBaseUrl() -}}');
 </script>

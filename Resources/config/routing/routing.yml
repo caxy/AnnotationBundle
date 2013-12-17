@@ -1,4 +1,4 @@
 annotation:
-    resource: "@AnnotationBundle/Controller/"
+    resource: "@CaxyAnnotationBundle/Controller/"
     type:     annotation
     prefix:   /

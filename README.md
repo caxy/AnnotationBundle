@@ -48,17 +48,17 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Caxy\AnnotationBundle\AnnotationBundle(),
+        new Caxy\AnnotationBundle\CaxyAnnotationBundle(),
     );
 }
 ```
 
 ### Step 3: Configure the CaxyAnnotationBundle
 
-app/config/annotation/annotation.yml
+app/config/caxy/annotation.yml
 
 ``` yaml
-annotation:
+caxy/annotation:
     selector: ".annotation"
     plugins: ['store']
 ```
@@ -67,8 +67,15 @@ annotation:
 
 ### Step 4: Import CaxyAnnotationBundle routing files
 
-Now that you have activated and configured the bundle, all that is left to do is
-import the CaxyAnnotationBundle routing files.
+Import the config file for the annotation
+
+``` yaml
+# app/config/config.yml
+
+- { resource: caxy/annotation.yml }
+```
+
+Next import the CaxyAnnotationBundle routing files.
 
 In YAML:
 
@@ -76,7 +83,7 @@ In YAML:
 # app/config/routing.yml
 
 caxy_annotation:
-    resource: "@AnnotationBundle/Resources/config/routing/routing.yml"
+    resource: "@CaxyAnnotationBundle/Resources/config/routing/routing.yml"
 ```
 
 ### Step 5: Update your database schema
