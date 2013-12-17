@@ -31,7 +31,7 @@ Add CaxyAnnotationBundle in your composer.json:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update caxy/caxy-annotation
+$ php composer.phar update caxy/annotation-bundle
 ```
 
 Composer will install the bundle to your project's `vendor/caxy` directory.
