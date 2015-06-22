@@ -5,7 +5,7 @@ namespace Caxy\AnnotationBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Annotation
+ * Annotation.
  *
  * @ORM\Table(name="caxy_annotation")
  * @ORM\Entity()
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Annotation
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -70,11 +70,10 @@ class Annotation
      */
     protected $text;
 
-
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -82,22 +81,23 @@ class Annotation
     }
 
     /**
-     * Set start
+     * Set start.
      *
      * @param string $start
+     *
      * @return Annotation
      */
     public function setStart($start)
     {
         $this->start = $start;
-    
+
         return $this;
     }
 
     /**
-     * Get start
+     * Get start.
      *
-     * @return string 
+     * @return string
      */
     public function getStart()
     {
@@ -105,45 +105,47 @@ class Annotation
     }
 
     /**
-     * Set start_offset
+     * Set start_offset.
      *
      * @param int $start_offset
+     *
      * @return Annotation
      */
     public function setStartOffset($start_offset)
     {
         $this->start_offset = $start_offset;
-    
+
         return $this;
     }
 
     /**
-     * Get start_offset
+     * Get start_offset.
      *
-     * @return int 
+     * @return int
      */
     public function getStartOffset()
     {
         return $this->start_offset;
     }
 
-     /**
-     * Set end
+    /**
+     * Set end.
      *
      * @param string $end
+     *
      * @return Annotation
      */
     public function setEnd($end)
     {
         $this->end = $end;
-    
+
         return $this;
     }
 
     /**
-     * Get end
+     * Get end.
      *
-     * @return string 
+     * @return string
      */
     public function getEnd()
     {
@@ -151,22 +153,23 @@ class Annotation
     }
 
     /**
-     * Set end_offset
+     * Set end_offset.
      *
      * @param int $end_offset
+     *
      * @return Annotation
      */
     public function setEndOffset($end_offset)
     {
         $this->end_offset = $end_offset;
-    
+
         return $this;
     }
 
     /**
-     * Get end_offset
+     * Get end_offset.
      *
-     * @return int 
+     * @return int
      */
     public function getEndOffset()
     {
@@ -174,22 +177,23 @@ class Annotation
     }
 
     /**
-     * Set quote
+     * Set quote.
      *
      * @param string $quote
+     *
      * @return Annotation
      */
     public function setQuote($quote)
     {
         $this->quote = $quote;
-    
+
         return $this;
     }
 
     /**
-     * Get quote
+     * Get quote.
      *
-     * @return string 
+     * @return string
      */
     public function getQuote()
     {
@@ -197,22 +201,23 @@ class Annotation
     }
 
     /**
-     * Set url
+     * Set url.
      *
      * @param string $url
+     *
      * @return Annotation
      */
     public function setUrl($url)
     {
         $this->url = $url;
-    
+
         return $this;
     }
 
     /**
-     * Get url
+     * Get url.
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
@@ -220,22 +225,23 @@ class Annotation
     }
 
     /**
-     * Set text
+     * Set text.
      *
      * @param string $text
+     *
      * @return Annotation
      */
     public function setText($text)
     {
         $this->text = $text;
-    
+
         return $this;
     }
 
     /**
-     * Get text
+     * Get text.
      *
-     * @return string 
+     * @return string
      */
     public function getText()
     {

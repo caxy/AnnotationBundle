@@ -1,17 +1,16 @@
 <?php
+
 namespace Caxy\AnnotationBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Twig Extension for Annotator support.
- *
- * 
  */
 class CaxyAnnotationExtension extends \Twig_Extension
 {
     /**
-     * Container
+     * Container.
      *
      * @var ContainerInterface
      */
@@ -19,14 +18,14 @@ class CaxyAnnotationExtension extends \Twig_Extension
 
     /**
      * Asset Base Url
-     * Used to over ride the asset base url (to not use CDN for instance)
+     * Used to over ride the asset base url (to not use CDN for instance).
      *
      * @var String
      */
     protected $baseUrl;
 
     /**
-     * Initialize tinymce helper
+     * Initialize tinymce helper.
      *
      * @param ContainerInterface $container
      */
@@ -48,7 +47,7 @@ class CaxyAnnotationExtension extends \Twig_Extension
     }
 
     /**
-     * Get parameters from the service container
+     * Get parameters from the service container.
      *
      * @param string $name
      *
@@ -67,20 +66,20 @@ class CaxyAnnotationExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'annotation_init' => new \Twig_Function_Method($this, 'annotationInit', array('is_safe' => array('html')))
+            'annotation_init' => new \Twig_Function_Method($this, 'annotationInit', array('is_safe' => array('html'))),
         );
     }
 
     /**
-     * Annotator initializations
+     * Annotator initializations.
      *
      * @return string
      */
-    public function annotationInit($plugin_settings=null)
+    public function annotationInit($plugin_settings = null)
     {
         $config = $this->getParameter('annotation.config');
 
-        if($plugin_settings){
+        if ($plugin_settings) {
             $config['metadata'] = $plugin_settings['metadata'];
         }
 
@@ -91,25 +90,24 @@ class CaxyAnnotationExtension extends \Twig_Extension
 
         $plugin_array = array();
 
-        if(isset($config['plugins'])){
+        if (isset($config['plugins'])) {
             $plugin_count = count($config['plugins']);
 
-            for($i=0;$i<=$plugin_count;$i++){
-                if(isset($config['plugins'][$i])){
-                    switch($config['plugins'][$i]){
-                        case "store":
+            for ($i = 0;$i <= $plugin_count;++$i) {
+                if (isset($config['plugins'][$i])) {
+                    switch ($config['plugins'][$i]) {
+                        case 'store':
                             array_push($plugin_array, 'store');
                         break;
                     }
                 }
             }
-            
         }
 
         return $this->getService('templating')->render('CaxyAnnotationBundle:Script:init.html.twig', array(
             'annotation_config' => json_encode($config),
             'plugin_array' => $plugin_array,
-            'base_url'       => $this->baseUrl,
+            'base_url' => $this->baseUrl,
         ));
     }
 
@@ -123,9 +121,8 @@ class CaxyAnnotationExtension extends \Twig_Extension
         return 'annotation_extension';
     }
 
-
     /**
-     * Get url from config string
+     * Get url from config string.
      *
      * @param string $inputUrl
      *
@@ -139,10 +136,9 @@ class CaxyAnnotationExtension extends \Twig_Extension
         $url = preg_replace('/^asset\[(.+)\]$/i', '$1', $inputUrl);
 
         if ($inputUrl !== $url) {
-            return $assets->getUrl($this->baseUrl . $url);
+            return $assets->getUrl($this->baseUrl.$url);
         }
 
         return $inputUrl;
     }
 }
-

@@ -1,9 +1,9 @@
-parameters: 
+parameters:
         caxy_annotation.twig.extension.class: Caxy\AnnotationBundle\Twig\Extension\CaxyAnnotationExtension
 
 services:
     annotation_extension:
         class: %caxy_annotation.twig.extension.class%
         arguments: [@service_container]
-        tags: 
+        tags:
             - { name: twig.extension }
